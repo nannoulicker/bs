@@ -20,6 +20,7 @@ class ArticleController extends Controller
     public function showAction(Article $article)
     {
         $data = $this->get('jms_serializer')->serialize($article, 'json');
+        $test = 'test';
 
         $response = new Response($data);
         $response->headers->set('Content-Type', 'application/json');
